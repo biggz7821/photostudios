@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TONIEBETH STUDIOS </title>
+<link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6B46C1',
+                        secondary: '#ED64A6',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans antialiased">
+    <custom-navbar></custom-navbar>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center bg-gray-900 text-white overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <img src="DSC_9697.JPG" alt="Photography Studio" class="absolute inset-0 w-full h-full object-cover">
+        
+        <div class="relative z-10 px-6 text-center max-w-4xl">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">TONNIEBETH 
+               PHOTO STUDIO
+            </h1>
+            <p class="text-xl md:text-2xl mb-8">Where every click tells your unique story 📸</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://wa.me/254721787758" class="bg-primary hover:bg-purple-700 text-white px-6 py-3 rounded-full font-medium transition duration-300 flex items-center justify-center gap-2">
+                    <i data-feather="message-circle"></i> Book a Session
+                </a>
+                <a href="#portfolio" class="bg-white hover:bg-gray-100 text-gray-800 px-6 py-3 rounded-full font-medium transition duration-300">
+                    View Our Work
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Our Services</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Photography Card -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <img src="http://static.photos/people/640x360/1" alt="Photography" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3">Professional Photography</h3>
+                        <p class="text-gray-600 mb-4">Capturing your special moments with artistic vision and technical expertise. We specialize in event photography, portraits, and commercial shoots.</p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center gap-2">
+                                <i data-feather="check" class="text-green-500"></i>
+                                <span>Weddings & Events</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-feather="check" class="text-green-500"></i>
+                                <span>Portrait Sessions</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-feather="check" class="text-green-500"></i>
+                                <span>Commercial Photography</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Videography Card -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <img src="http://static.photos/technology/640x360/2" alt="Videography" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3">Cinematic Videography</h3>
+                        <p class="text-gray-600 mb-4">Creating stunning visual stories through motion. Our videography services bring your events and projects to life with cinematic quality.</p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center gap-2">
+                                <i data-feather="check" class="text-green-500"></i>
+                                <span>Event Coverage</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-feather="check" class="text-green-500"></i>
+                                <span>Short Films</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-feather="check" class="text-green-500"></i>
+                                <span>Commercial Videos</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Our Portfolio</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Portfolio Item 1 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                    <img src="DSC_9668.JPG" alt="Birthday Photograph" class="w-full h-50 object-cover transition-transform duratiDSC_9668.JPGon-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="text-center text-white p-4">
+                            <h3 class="text-xl font-bold mb-2">Birthday Photo</h3>
+                            <p>Capturing the joy and excitement of your special day</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 2 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                    <img src="DSC_9697.JPG" alt="Portrait Session" class="w-full h-50 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="text-center text-white p-4">
+                            <h3 class="text-xl font-bold mb-2">Portrait Session</h3>
+                            <p>Stunning individual and group portraits</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 3 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                    <img src="DSC_5825.jpg" alt="Traditional wear" class="w-full h-50 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="text-center text-white p-4">
+                            <h3 class="text-xl font-bold mb-2">Traditional wear</h3>
+                            <p>Embrace your tradition professionally</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 4 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                    <img src="DSC_8787.jpg" alt="Travel Videography" class="w-full h-50 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="text-center text-white p-4">
+                            <h3 class="text-xl font-bold mb-2">Travel Videography</h3>
+                            <p>Beautiful travel documentaries</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 5 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                    <img src="DSC_6831.jpg" alt="Fashion Shoot" class="w-full h-50 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="text-center text-white p-4">
+                            <h3 class="text-xl font-bold mb-2">Fashion Shoot</h3>
+                            <p>Editorial and commercial fashion work</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 6 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                    <img src="DSC_8606.jpg" alt="Music Video" class="w-full h-50 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="text-center text-white p-4">
+                            <h3 class="text-xl font-bold mb-2">Music Video</h3>
+                            <p>Creative music video production</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="https://www.instagram.com/tonniebethphotostudio?igsh=azg5ZGhsbzNoMW04" target="_blank" class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-full font-medium transition-all duration-300 hover:shadow-lg">
+                    <i data-feather="instagram"></i>
+                    See More on Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">What Our Clients Say</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex">
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"TONIEBETH STUDIOS captured our wedding day perfectly! The photos are stunning and exactly what we wanted. Professional, creative, and so easy to work with."</p>
+                    <div class="flex items-center">
+                        <img src="http://static.photos/people/80x80/9" alt="Shalynn Njoroge." class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold">Shalynn Njoroge</h4>
+                            <p class="text-gray-500 text-sm">Wedding Client</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex">
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"The corporate video they produced for us exceeded all expectations. Professional quality, on-time delivery, and great communication throughout the process."</p>
+                    <div class="flex items-center">
+                        <img src="http://static.photos/people/80x80/10" alt="Edward Muruga" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold">Edward Muruga</h4>
+                            <p class="text-gray-500 text-sm">Corporate Client</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex">
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Absolutely love my portrait session photos! They made me feel comfortable and brought out my best angles. Highly recommend for anyone looking for professional photos."</p>
+                    <div class="flex items-center">
+                        <img src="http://static.photos/people/80x80/11" alt="Jeff Muiruri" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold">Jeff Muiruri</h4>
+                            <p class="text-gray-500 text-sm">Portrait Client</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-primary text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Get In Touch</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <i data-feather="mail" class="w-6 h-6 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold">Email</h4>
+                                <a href="mailto:tonniebethstudio@gmail.com" class="hover:underline">tonniebethstudio@gmail</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <i data-feather="phone" class="w-6 h-6 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold">Phone/WhatsApp</h4>
+                                <a href="https://wa.me/254721787758" class="hover:underline">+254 721787758</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <i data-feather="instagram" class="w-6 h-6 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold">Instagram</h4>
+                                <a href="https://www.instagram.com/tonnybeth_photostudio?igsh=MTBtMmdrenF4MGMzYw==" target="_blank" class="hover:underline">@tonniebethstudios</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <i data-feather="map-pin" class="w-6 h-6 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold">Based In</h4>
+                                <p>Gatundu South Town,Behind Family Bank</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block mb-2 font-medium">Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-10 border border-white border-opacity-20 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 text-white placeholder-white placeholder-opacity-70" placeholder="Your name">
+                            </div>
+                            <div>
+                                <label for="email" class="block mb-2 font-medium">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-10 border border-white border-opacity-20 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 text-white placeholder-white placeholder-opacity-70" placeholder="Your email">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block mb-2 font-medium">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-10 border border-white border-opacity-20 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 text-white placeholder-white placeholder-opacity-70" placeholder="Subject">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block mb-2 font-medium">Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-10 border border-white border-opacity-20 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 text-white placeholder-white placeholder-opacity-70" placeholder="Your message"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-white text-primary px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition duration-300">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <custom-footer></custom-footer>
+
+    <!-- Scripts -->
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

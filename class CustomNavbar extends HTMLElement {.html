@@ -1,0 +1,124 @@
+class CustomNavbar extends HTMLElement {
+    connectedCallback() {
+        this.attachShadow({ mode: 'open' });
+        this.shadowRoot.innerHTML = `
+            <style>
+                .navbar {
+                    backdrop-filter: blur(10px);
+                    background-color: rgba(0, 0, 0, 0.7);
+                    transition: all 0.3s ease;
+                }
+                
+                .navbar.scrolled {
+                    background-color: rgba(107, 70, 193, 0.95);
+                }
+                
+                .nav-link {
+                    position: relative;
+                }
+                
+                .nav-link::after {
+                    content: '';
+                    position: absolute;
+                    width: 0;
+                    height: 2px;
+                    bottom: -2px;
+                    left: 0;
+                    background-color: white;
+                    transition: width 0.3s ease;
+                }
+                
+                .nav-link:hover::after {
+                    width: 100%;
+                }
+                
+                .mobile-menu {
+                    transition: all 0.3s ease;
+                }
+            </style>
+            
+            <nav class="navbar fixed w-full z-50 text-white py-4 px-6">
+                <div class="container mx-auto flex justify-between items-center">
+                    <a href="#" class="text-2xl font-bold flex items-center">
+                        <span>TONIEBETH</span>
+                        <span class="text-secondary">STUDIOS</span>
+                    </a>
+                    
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="#" class="nav-link">Home</a>
+                        <a href="#services" class="nav-link">Services</a>
+                        <a href="#portfolio" class="nav-link">Portfolio</a>
+                        <a href="#contact" class="nav-link">Contact</a>
+                        <a href="https://wa.me/254715467342" class="bg-secondary hover:bg-pink-600 text-white px-6 py-2 rounded-full font-medium transition duration-300 flex items-center gap-2">
+                            <i data-feather="message-circle"></i>
+                            Book Now
+                        </a>
+                    </div>
+                    
+                    <button class="md:hidden focus:outline-none" id="menu-toggle">
+                        <i data-feather="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+                
+                <!-- Mobile Menu -->
+                <div class="mobile-menu hidden md:hidden bg-gray-900 bg-opacity-95 mt-4 rounded-lg overflow-hidden" id="mobile-menu">
+                    <div class="flex flex-col space-y-4 p-4">
+                        <a href="#" class="nav-link px-4 py-2">Home</a>
+                        <a href="#services" class="nav-link px-4 py-2">Services</a>
+                        <a href="#portfolio" class="nav-link px-4 py-2">Portfolio</a>
+                        <a href="#contact" class="nav-link px-4 py-2">Contact</a>
+                        <a href="https://wa.me/254715467342" class="bg-secondary hover:bg-pink-600 text-white px-6 py-2 rounded-full font-medium transition duration-300 flex items-center justify-center gap-2 mt-2">
+                            <i data-feather="message-circle"></i>
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+            </nav>
+            
+            <script>
+                // Navbar scroll effect
+                window.addEventListener('scroll', function() {
+                    const navbar = document.querySelector('.navbar');
+                    if (window.scrollY > 50) {
+                        navbar.classList.add('scrolled');
+                    } else {
+                        navbar.classList.remove('scrolled');
+                    }
+                });
+                
+                // Mobile menu toggle
+                document.getElementById('menu-toggle').addEventListener('click', function() {
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    mobileMenu.classList.toggle('hidden');
+                    
+                    // Change icon
+                    const icon = this.querySelector('i');
+                    if (mobileMenu.classList.contains('hidden')) {
+                        feather.replace();
+                    } else {
+                        icon.setAttribute('data-feather', 'x');
+                        feather.replace();
+                    }
+                });
+                
+                // Close mobile menu when clicking a link
+                document.querySelectorAll('#mobile-menu a').forEach(link => {
+                    link.addEventListener('click', function() {
+                        document.getElementById('mobile-menu').classList.add('hidden');
+                        document.getElementById('menu-toggle').querySelector('i').setAttribute('data-feather', 'menu');
+                        feather.replace();
+                    });
+                });
+            </script>
+        `;
+        
+        // Replace feather icons
+        setTimeout(() => {
+            if (typeof feather !== 'undefined') {
+                feather.replace();
+            }
+        }, 100);
+    }
+}
+
+customElements.define('custom-navbar', CustomNavbar);

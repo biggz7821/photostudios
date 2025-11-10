@@ -1,0 +1,93 @@
+class CustomFooter extends HTMLElement {
+    connectedCallback() {
+        this.attachShadow({ mode: 'open' });
+        this.shadowRoot.innerHTML = `
+            <style>
+                .social-icon {
+                    transition: all 0.3s ease;
+                }
+                
+                .social-icon:hover {
+                    transform: translateY(-3px);
+                }
+                
+                .footer-link {
+                    position: relative;
+                }
+                
+                .footer-link::after {
+                    content: '';
+                    position: absolute;
+                    width: 0;
+                    height: 1px;
+                    bottom: -2px;
+                    left: 0;
+                    background-color: white;
+                    transition: width 0.3s ease;
+                }
+                
+                .footer-link:hover::after {
+                    width: 100%;
+                }
+            </style>
+            
+            <footer class="bg-gray-900 text-white py-12 px-6">
+                <div class="container mx-auto">
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                        <div class="md:col-span-2">
+                            <h3 class="text-2xl font-bold mb-4 flex items-center">
+                                <span>TONIEBETH</span>
+                                <span class="text-secondary">STUDIOS</span>
+                            </h3>
+                            <p class="text-gray-400 mb-6">Capturing life's moments, one frame at a time. Professional photography and videography services for all your special occasions.</p>
+                            <div class="flex space-x-4">
+                                <a href="https://www.instagram.com/tonniebethstudios" target="_blank" class="social-icon bg-gray-800 hover:bg-secondary w-10 h-10 rounded-full flex items-center justify-center">
+                                    <i data-feather="instagram"></i>
+                                </a>
+                                <a href="https://wa.me/254715467342" target="_blank" class="social-icon bg-gray-800 hover:bg-green-500 w-10 h-10 rounded-full flex items-center justify-center">
+                                    <i data-feather="message-circle"></i>
+                                </a>
+                                <a href="mailto:tonniebeth@gmail.com" class="social-icon bg-gray-800 hover:bg-red-500 w-10 h-10 rounded-full flex items-center justify-center">
+                                    <i data-feather="mail"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-lg font-bold mb-4">Services</h4>
+                            <ul class="space-y-2">
+                                <li><a href="#services" class="footer-link text-gray-400 hover:text-white">Wedding Photography</a></li>
+                                <li><a href="#services" class="footer-link text-gray-400 hover:text-white">Event Videography</a></li>
+                                <li><a href="#services" class="footer-link text-gray-400 hover:text-white">Portrait Sessions</a></li>
+                                <li><a href="#services" class="footer-link text-gray-400 hover:text-white">Commercial Shoots</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                            <ul class="space-y-2">
+                                <li><a href="#" class="footer-link text-gray-400 hover:text-white">Home</a></li>
+                                <li><a href="#services" class="footer-link text-gray-400 hover:text-white">Services</a></li>
+                                <li><a href="#portfolio" class="footer-link text-gray-400 hover:text-white">Portfolio</a></li>
+                                <li><a href="#contact" class="footer-link text-gray-400 hover:text-white">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                        <p>&copy; ${new Date().getFullYear()} TONIEBETH STUDIOS. All rights reserved.</p>
+                    </div>
+                </div>
+            </footer>
+        `;
+        
+        // Replace feather icons
+        setTimeout(() => {
+            if (typeof feather !== 'undefined') {
+                feather.replace();
+            }
+        }, 100);
+    }
+}
+
+customElements.define('custom-footer', CustomFooter);
